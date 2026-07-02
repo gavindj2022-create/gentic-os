@@ -1,0 +1,10 @@
+fastapi==0.115.12
+uvicorn[standard]==0.34.2
+httpx==0.28.1
+apscheduler==3.11.0
+psutil
+anthropic>=0.39.0
+openai>=1.50.0
+google-generativeai>=0.8.0
+python-dotenv>=1.0.0
+openpyxl>=3.1.5

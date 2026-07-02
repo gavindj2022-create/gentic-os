@@ -1,0 +1,42 @@
+# Dependencies / build output
+node_modules/
+dist/
+build/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# Databases / runtime state
+*.db
+*.sqlite
+*.sqlite3
+backend/voice/pending_sheet_sync.jsonl
+tmp/
+
+# Logs
+*.log
+backend_stdout.log
+backend_stderr.log
+
+# Secrets / local config — NEVER commit
+.env
+.env.*
+*.env
+backend/voice/voice_config.json
+backend/outbound_config.json
+**/secrets/
+**/*_secrets*
+*.pem
+*.key
+credentials*.json
+token*.json
+
+# OS junk
+Thumbs.db
+Desktop.ini
+.DS_Store
+nul
