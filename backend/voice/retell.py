@@ -12,7 +12,7 @@ import sys
 from pathlib import Path
 
 # AGENTS dir holds the `bella_agents` package.
-_AGENTS_DIR = Path("C:/Users/ninja/Gavs Brain/Gavs Brain/AGENTS")
+_AGENTS_DIR = Path(os.getenv("VAULT_PATH", "./vault")) / "AGENTS"
 if _AGENTS_DIR.exists() and str(_AGENTS_DIR) not in sys.path:
     sys.path.insert(0, str(_AGENTS_DIR))
 

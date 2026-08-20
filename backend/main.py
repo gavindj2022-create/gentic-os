@@ -1,3 +1,4 @@
+import os
 import asyncio
 from contextlib import asynccontextmanager
 from fastapi import FastAPI, WebSocket, WebSocketDisconnect
@@ -551,8 +552,8 @@ async def api_life():
     import json
     from datetime import datetime, timedelta
 
-    olivia_dir = Path("C:/Users/ninja/Gavs Brain/Gavs Brain/OLIVIA")
-    vault_dir = Path("C:/Users/ninja/Gavs Brain/Gavs Brain")
+    olivia_dir = Path(os.getenv("VAULT_PATH", "./vault")) / "OLIVIA"
+    vault_dir = Path(os.getenv("VAULT_PATH", "./vault"))
     today = datetime.now().strftime("%Y-%m-%d")
 
     # Health log

@@ -11,6 +11,7 @@ Auto-routing to calendar / follow-up / Discord is Phase 2 (manual dispositions n
 """
 
 from __future__ import annotations
+import os
 
 import asyncio
 import json
@@ -36,11 +37,11 @@ HERE = Path(__file__).parent
 CONFIG_PATH = HERE / "voice_config.json"
 TEMPLATE_PATH = HERE / "salescaller_prompt_template.md"
 CALL_SHEET = Path(
-    "C:/Users/ninja/Gavs Brain/Gavs Brain/Projects/Ascendance AI Cold Calling/"
+    os.getenv("VAULT_PATH", "./vault") + "/Projects/Outbound Campaign A/"
     "Ascendance Call Sheet.xlsx"
 )
 BELLA_SHEET = Path(
-    "C:/Users/ninja/Gavs Brain/Gavs Brain/Projects/Limitless Outbound/"
+    os.getenv("VAULT_PATH", "./vault") + "/Projects/Outbound Campaign B/"
     "Bella Prospect Call Sheet.xlsx"
 )
 

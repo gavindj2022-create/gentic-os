@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 # Load .env for API keys + budget config
 load_dotenv(Path(__file__).parent / ".env")
 
-VAULT_PATH = Path("C:/Users/ninja/Gavs Brain/Gavs Brain")
+VAULT_PATH = Path(os.getenv("VAULT_PATH", "./vault"))
 OLIVIA_DIR = VAULT_PATH / "OLIVIA"
 ALFRED_DIR = VAULT_PATH / "ALFRED"
 ICARUS_DIR = VAULT_PATH / "ICARUS"

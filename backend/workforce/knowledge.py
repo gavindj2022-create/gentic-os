@@ -1,3 +1,4 @@
+import os
 """Knowledge extraction — analyzes task results and writes insights to DB + Obsidian vault."""
 
 import logging
@@ -9,7 +10,7 @@ from .executors import get_executor
 
 log = logging.getLogger("workforce.knowledge")
 
-VAULT_PATH = Path("C:/Users/ninja/Gavs Brain/Gavs Brain")
+VAULT_PATH = Path(os.getenv("VAULT_PATH", "./vault"))
 INSIGHTS_DIR = VAULT_PATH / "SYSTEM" / "AgentInsights"
 
 CATEGORIES = ["security", "expansion", "improvement", "revenue"]
