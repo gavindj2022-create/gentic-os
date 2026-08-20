@@ -50,12 +50,10 @@ BUDGET_CAPS = {
 }
 
 PROJECT_REGISTRY = [
-    {"name": "GenTIC OS", "path": "C:/Users/ninja/gentic-os", "type": "fullstack"},
-    {"name": "Limitless Website", "path": "C:/Users/ninja/limitless-website", "type": "nextjs"},
-    {"name": "Studio B Hair Design", "path": "C:/Users/ninja/salon-sites/studio-b-hair-design", "type": "static"},
-    {"name": "ReceiptVault Lite", "path": "C:/Users/ninja/receiptvault-lite", "type": "python"},
-    {"name": "STR Website", "path": "C:/Users/ninja/OneDrive/Desktop/STR Website", "type": "static"},
-    {"name": "BTC Scanner", "path": "C:/Users/ninja/btc-scanner", "type": "react"},
-    {"name": "DAWGS AGI", "path": "C:/Users/ninja/dawgs-agi", "type": "business"},
-    {"name": "Obsidian Vault", "path": "C:/Users/ninja/Gavs Brain/Gavs Brain", "type": "vault"},
+    # Point these at your own local projects. Paths are read-only, used for status cards.
+    {"name": "GenTIC OS", "path": os.getenv("PROJECT_ROOT", ".") + "/gentic-os", "type": "fullstack"},
+    {"name": "Marketing Site", "path": os.getenv("PROJECT_ROOT", ".") + "/marketing-site", "type": "nextjs"},
+    {"name": "Client Static Site", "path": os.getenv("PROJECT_ROOT", ".") + "/client-site", "type": "static"},
+    {"name": "Receipt Pipeline", "path": os.getenv("PROJECT_ROOT", ".") + "/receipt-pipeline", "type": "python"},
+    {"name": "Knowledge Vault", "path": os.getenv("PROJECT_ROOT", ".") + "/vault", "type": "vault"},
 ]

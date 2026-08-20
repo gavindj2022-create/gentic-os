@@ -294,21 +294,15 @@ def mark_orphaned_calls_ended() -> int:
         return cur.rowcount
 
 
-# Initial project inventory — sourced from a scan of Gav's Obsidian vault
-# (Projects/, Business/, ICARUS/). Seeded once on first boot.
+# Sample project inventory. Replace with your own, or leave empty to start clean.
+# Seeded once on first boot, only when the table is empty.
 _SEED_TODOS = [
-    ("J.E. Ward Website", "Wire 3 Formspree form IDs into main.js (Contact, Junk Removal, Public Adjusting) and end-to-end test every form. Site is deployed at jeward-llc.pages.dev.", "in_progress", "website", 1, 85, "Projects/J.E. Ward Website/Deployment Guide.md"),
-    ("ReceiptVault Lite", "Activate the build: run --auth, then --setup, drop a test receipt and verify the full pipeline. 15/15 modules built + smoke tested.", "in_progress", "automation", 2, 90, "Projects/ReceiptVault/ReceiptVault Lite - Resume Handoff 2026-05-14.md"),
-    ("ICARUS Email Intelligence", "Add SERPER_API_KEY to OLIVIA/.env, pip install requirements.txt, run a dry-run test on first boot. Monitoring/classification/alerts already live.", "in_progress", "ai_agent", 2, 80, "ICARUS/000 - Icarus Hub.md"),
-    ("STR Website — Owned Form Backend", "Take the Limitless forms backend live for shorttermretreats.com: verify Limitless domain + add Resend API key, then wire iCal tokens. Replaces Formspree (2-email cap hit).", "blocked", "website", 2, 85, "Projects/STR Website"),
-    ("Limitless Forms Backend", "Go-live blocked on Limitless domain verification + Resend API key. Multi-tenant zero-retention Worker built + deployed; logic verified.", "blocked", "automation", 2, 90, "Projects/Limitless Forms"),
-    ("Studio B AI Receptionist", "Create Supabase project, build the Retell AI agent, buy a Twilio number, build 6 n8n workflows, create the Google Sheets template. System prompt + DB schema done.", "in_progress", "ai_agent", 3, 30, "Business/Hair Salon AI Receptionist.md"),
-    ("Sofia Voice Receptionist", "Buy a phone number, finish n8n Cloud setup, build the Google Calendar webhook, test the agent with real phone calls. 7 next steps queued.", "in_progress", "ai_agent", 3, 40, "Business/Sofia Voice Receptionist Agent.md"),
-    ("Claude SMB Service", "Finalize service packages, prep sales materials, identify + close the first pilot client, run the first deployment.", "in_progress", "business", 3, 50, "Projects/Claude SMB Service/_Claude SMB Service Hub.md"),
-    ("Jackson ValueSeek", "Process the remaining 122 images (IMG_2157–2278) with Sonnet Vision. 86% complete (791/913). Blocked on Anthropic credit top-up.", "blocked", "automation", 3, 87, "Business/Jackson ValueSeek Project.md"),
-    ("Limitless Agency — First Client", "Close the first commercial client (Sofia + Studio B are internal/test). Market the AI receptionist service to salons, restaurants, real estate, law firms.", "in_progress", "business", 4, 45, "Business/000 - Business Hub.md"),
-    ("Core Training Center Video", "Regenerate the 6-8 scenes via AI (Kling 3.0 / Seedance 2.0), chain end frames for continuity, stabilize + crossfade. Blocked on Higgsfield credit top-up.", "blocked", "content", 4, 60, "Projects/Core Training Center Video/Core Video Project Notes.md"),
-    ("Vault File Reorganization", "Resume the 19-phase full-system vault reorg (paused before Phase 1). Plan: plans/cozy-snuggling-moonbeam.md.", "todo", "other", 5, 5, "plans/cozy-snuggling-moonbeam.md"),
+    ("Client Website Launch", "Wire up the contact form IDs and end-to-end test every form before go-live.", "in_progress", "website", 1, 85, "Projects/Client Website/Deployment Guide.md"),
+    ("Receipt Capture Pipeline", "Run the auth and setup steps, drop a test receipt, and verify the full pipeline end to end.", "in_progress", "automation", 2, 90, "Projects/Receipt Pipeline/Handoff.md"),
+    ("Email Intelligence Agent", "Add the search API key to the environment file, install requirements, and run a dry-run on first boot.", "in_progress", "automation", 2, 70, "Projects/Email Agent/Setup.md"),
+    ("Forms Backend", "Multi-tenant zero-retention Worker. Go-live blocked on domain verification and an email API key.", "blocked", "automation", 2, 80, "Projects/Forms Backend/Spec.md"),
+    ("Voice Receptionist", "Provision a phone number, finish the workflow setup, build the calendar webhook, then test with real calls.", "in_progress", "ai_agent", 3, 40, "Projects/Voice Receptionist/Build.md"),
+    ("Analytics Rollout", "Add the analytics property to every live property and confirm events are firing.", "todo", "website", 2, 10, "Projects/Analytics/Plan.md"),
 ]
 
 

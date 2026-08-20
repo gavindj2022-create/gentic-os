@@ -93,7 +93,7 @@ export default function Outbound() {
   const [track, setTrack] = useState('all')
   const [configOpen, setConfigOpen] = useState(false)
   const [killBusy, setKillBusy] = useState(false)
-  const [cfg, setCfg] = useState({ sheet_id: '', n8n_url: 'https://gavvro.app.n8n.cloud', n8n_api_key: '' })
+  const [cfg, setCfg] = useState({ sheet_id: '', n8n_url: '', n8n_api_key: '' })
   const { on } = useWebSocket()
 
   const load = useCallback(() => {
